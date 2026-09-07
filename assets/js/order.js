@@ -1,5 +1,7 @@
+
 /* =========================================================
    YOUR SHOES - ORDER SYSTEM
+   Netlify Forms Connected
 ========================================================= */
 
 
@@ -180,6 +182,21 @@ function formatPrice(price) {
 
 
 /* =========================================================
+   HIDDEN FIELD HELPER
+========================================================= */
+
+function setHiddenField(id, value) {
+
+    const field = document.getElementById(id);
+
+    if (field) {
+        field.value = value ?? "";
+    }
+
+}
+
+
+/* =========================================================
    PRODUCT NOT FOUND
 ========================================================= */
 
@@ -252,30 +269,37 @@ else {
         formatPrice(total);
 
 
-    /* Hidden fields */
+    /* Hidden product data */
 
-    document.getElementById("hiddenProduct").value =
-        product.name;
+    setHiddenField(
+        "hiddenProduct",
+        product.name
+    );
 
+    setHiddenField(
+        "hiddenCategory",
+        product.category
+    );
 
-    document.getElementById("hiddenCategory").value =
-        product.category;
+    setHiddenField(
+        "hiddenSize",
+        selectedSize || ""
+    );
 
+    setHiddenField(
+        "hiddenQuantity",
+        quantity
+    );
 
-    document.getElementById("hiddenSize").value =
-        selectedSize || "";
+    setHiddenField(
+        "hiddenPrice",
+        product.price
+    );
 
-
-    document.getElementById("hiddenQuantity").value =
-        quantity;
-
-
-    document.getElementById("hiddenPrice").value =
-        product.price;
-
-
-    document.getElementById("hiddenTotal").value =
-        total;
+    setHiddenField(
+        "hiddenTotal",
+        total
+    );
 
 }
 
@@ -284,12 +308,19 @@ else {
    IMAGE FALLBACK
 ========================================================= */
 
-orderProductImage.addEventListener("error", function () {
+if (orderProductImage) {
 
-    this.src =
-        "https://placehold.co/1000x1000/f5f5f5/222?text=Product+Image";
+    orderProductImage.addEventListener(
+        "error",
+        function () {
 
-});
+            this.src =
+                "https://placehold.co/1000x1000/f5f5f5/222?text=Product+Image";
+
+        }
+    );
+
+}
 
 
 /* =========================================================
@@ -304,159 +335,273 @@ const paymentMethods =
 
 paymentMethods.forEach(function (payment) {
 
-    payment.addEventListener("change", function () {
+    payment.addEventListener(
+        "change",
+        function () {
 
-        if (this.value === "Easypaisa") {
+            if (this.value === "Easypaisa") {
 
-            easypaisaBox.classList.add("show");
+                easypaisaBox.classList.add("show");
 
-            transactionId.required = true;
+                transactionId.required = true;
+
+            }
+
+            else {
+
+                easypaisaBox.classList.remove("show");
+
+                transactionId.required = false;
+
+                transactionId.value = "";
+
+            }
 
         }
-
-        else {
-
-            easypaisaBox.classList.remove("show");
-
-            transactionId.required = false;
-
-            transactionId.value = "";
-
-        }
-
-    });
+    );
 
 });
 
 
 /* =========================================================
-   FORM SUBMIT
+   NETLIFY FORM SUBMISSION
 ========================================================= */
 
-orderForm.addEventListener("submit", function (event) {
+orderForm.addEventListener(
+    "submit",
+    async function (event) {
 
-    event.preventDefault();
-
-
-    if (!product) {
-
-        orderMessage.textContent =
-            "Product information is missing.";
-
-        orderMessage.className =
-            "order-message error";
-
-        return;
-
-    }
+        event.preventDefault();
 
 
-    /* Check size */
+        /* -----------------------------------------
+           PRODUCT CHECK
+        ----------------------------------------- */
 
-    if (!selectedSize) {
+        if (!product) {
 
-        orderMessage.textContent =
-            "Please go back and select a shoe size.";
+            orderMessage.textContent =
+                "Product information is missing.";
 
-        orderMessage.className =
-            "order-message error";
+            orderMessage.className =
+                "order-message error";
 
-        return;
-
-    }
-
-
-    /* Get payment */
-
-    const payment =
-        document.querySelector(
-            'input[name="paymentMethod"]:checked'
-        ).value;
-
-
-    /* Easypaisa validation */
-
-    if (
-        payment === "Easypaisa" &&
-        transactionId.value.trim() === ""
-    ) {
-
-        orderMessage.textContent =
-            "Please enter your Easypaisa transaction/reference number.";
-
-        orderMessage.className =
-            "order-message error";
-
-        transactionId.focus();
-
-        return;
-
-    }
-
-
-    /* Button */
-
-    const submitButton =
-        orderForm.querySelector(
-            ".place-order-btn"
-        );
-
-
-    submitButton.disabled = true;
-
-    submitButton.textContent =
-        "Processing...";
-
-
-    /*
-       Here you can connect your
-       Netlify Form / backend later.
-    */
-
-
-    setTimeout(function () {
-
-        orderMessage.textContent =
-            "Your order has been received successfully! We will contact you shortly.";
-
-        orderMessage.className =
-            "order-message success";
-
-
-        submitButton.textContent =
-            "Order Placed";
-
-
-        orderForm.reset();
-
-
-        /* Keep summary visible */
-
-        if (product) {
-
-            document.getElementById("hiddenProduct").value =
-                product.name;
-
-            document.getElementById("hiddenCategory").value =
-                product.category;
-
-            document.getElementById("hiddenSize").value =
-                selectedSize;
-
-            document.getElementById("hiddenQuantity").value =
-                selectedQuantity;
-
-            document.getElementById("hiddenPrice").value =
-                product.price;
-
-            document.getElementById("hiddenTotal").value =
-                product.price * selectedQuantity;
+            return;
 
         }
 
 
-        easypaisaBox.classList.remove("show");
+        /* -----------------------------------------
+           SIZE CHECK
+        ----------------------------------------- */
 
-    }, 1000);
+        if (!selectedSize) {
 
-});
+            orderMessage.textContent =
+                "Please go back and select a shoe size.";
+
+            orderMessage.className =
+                "order-message error";
+
+            return;
+
+        }
+
+
+        /* -----------------------------------------
+           PAYMENT METHOD
+        ----------------------------------------- */
+
+        const selectedPayment =
+            document.querySelector(
+                'input[name="paymentMethod"]:checked'
+            );
+
+
+        if (!selectedPayment) {
+
+            orderMessage.textContent =
+                "Please select a payment method.";
+
+            orderMessage.className =
+                "order-message error";
+
+            return;
+
+        }
+
+
+        const payment =
+            selectedPayment.value;
+
+
+        /* -----------------------------------------
+           EASYPAISA VALIDATION
+        ----------------------------------------- */
+
+        if (
+            payment === "Easypaisa" &&
+            transactionId.value.trim() === ""
+        ) {
+
+            orderMessage.textContent =
+                "Please enter your Easypaisa transaction/reference number.";
+
+            orderMessage.className =
+                "order-message error";
+
+            transactionId.focus();
+
+            return;
+
+        }
+
+
+        /* -----------------------------------------
+           UPDATE PAYMENT FIELD
+        ----------------------------------------- */
+
+        const paymentField =
+            document.querySelector(
+                'input[name="paymentMethod"]:checked'
+            );
+
+        if (paymentField) {
+
+            paymentField.value =
+                payment;
+
+        }
+
+
+        /* -----------------------------------------
+           BUTTON
+        ----------------------------------------- */
+
+        const submitButton =
+            orderForm.querySelector(
+                ".place-order-btn"
+            );
+
+
+        submitButton.disabled = true;
+
+        submitButton.textContent =
+            "Processing...";
+
+
+        orderMessage.textContent =
+            "";
+
+
+        try {
+
+            /* -----------------------------------------
+               CREATE NETLIFY FORM DATA
+            ----------------------------------------- */
+
+            const formData =
+                new FormData(orderForm);
+
+
+            /*
+               Netlify expects the form name.
+            */
+
+            formData.set(
+                "form-name",
+                "orders"
+            );
+
+
+            /* -----------------------------------------
+               SEND TO NETLIFY
+            ----------------------------------------- */
+
+            const response =
+                await fetch(
+                    "/",
+                    {
+                        method: "POST",
+
+                        headers: {
+                            "Content-Type":
+                                "application/x-www-form-urlencoded"
+                        },
+
+                        body:
+                            new URLSearchParams(formData)
+                                .toString()
+                    }
+                );
+
+
+            /* -----------------------------------------
+               SUCCESS
+            ----------------------------------------- */
+
+            if (response.ok) {
+
+                orderMessage.textContent =
+                    "Your order has been received successfully! We will contact you shortly.";
+
+                orderMessage.className =
+                    "order-message success";
+
+
+                submitButton.textContent =
+                    "Order Placed";
+
+
+                submitButton.disabled =
+                    true;
+
+
+                /*
+                   Keep product summary visible.
+                   Do NOT reset the whole form because
+                   we want the order information to remain.
+                */
+
+            }
+
+            else {
+
+                throw new Error(
+                    "Netlify form submission failed."
+                );
+
+            }
+
+        }
+
+
+        /* -----------------------------------------
+           ERROR
+        ----------------------------------------- */
+
+        catch (error) {
+
+            console.error(
+                "Order submission error:",
+                error
+            );
+
+
+            orderMessage.textContent =
+                "Something went wrong. Please try again.";
+
+            orderMessage.className =
+                "order-message error";
+
+
+            submitButton.disabled =
+                false;
+
+            submitButton.textContent =
+                "Place Order";
+
+        }
+
+    }
+);
