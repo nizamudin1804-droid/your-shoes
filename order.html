@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Place Order | Your Shoes</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         PAGE LOADER
+    ========================== -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <div class="loader-logo">YOUR SHOES</div>
+            <div class="loader-line">
+                <span></span>
+            </div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+<header class="main-header">
+
+    <div class="header-container">
+
+        <a href="index.html" class="logo">
+            YOUR SHOES
+        </a>
+
+        <nav class="desktop-nav">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about-us.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <a href="login.html" class="header-contact">
+            Login / Sign Up
+        </a>
+
+        <button class="menu-btn" id="menuBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </div>
+
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about-us.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="order-page-hero">
+
+    <div class="container">
+
+        <span>YOUR SHOES</span>
+
+        <h1>Complete Your Order</h1>
+
+        <p>
+            Enter your information and choose your payment method.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ORDER -->
+
+<section class="order-page-section">
+
+    <div class="container">
+
+        <div class="order-page-grid">
+
+
+            <!-- =========================
+                 PRODUCT SUMMARY
+            ========================== -->
+
+            <div class="order-product-card">
+
+                <h2>Order Summary</h2>
+
+                <div class="order-product-image-box">
+
+                    <img
+                        id="orderProductImage"
+                        src=""
+                        alt="Product"
+                    >
+
+                </div>
+
+
+                <div class="order-product-info">
+
+                    <p
+                        id="orderProductCategory"
+                        class="order-category"
+                    >
+                        Category
+                    </p>
+
+                    <h3 id="orderProductName">
+                        Product Name
+                    </h3>
+
+
+                    <div class="order-detail-row">
+
+                        <span>Size</span>
+
+                        <strong id="orderSize">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="order-detail-row">
+
+                        <span>Quantity</span>
+
+                        <strong id="orderQuantity">
+                            1
+                        </strong>
+
+                    </div>
+
+
+                    <div class="order-detail-row">
+
+                        <span>Price</span>
+
+                        <strong id="orderPrice">
+                            Rs. 0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="order-total-row">
+
+                        <span>Total</span>
+
+                        <strong id="orderTotal">
+                            Rs. 0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 CUSTOMER FORM
+            ========================== -->
+
+            <div class="customer-form-card">
+
+                <div class="order-form-heading">
+
+                    <span>DELIVERY DETAILS</span>
+
+                    <h2>Customer Information</h2>
+
+                    <p>
+                        Please provide your delivery information.
+                    </p>
+
+                </div>
+
+
+                <form id="orderForm">
+
+
+                    <!-- CUSTOMER -->
+
+                    <div class="form-grid">
+
+
+                        <div class="form-group">
+
+                            <label for="customerName">
+                                Full Name *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="customerName"
+                                name="customerName"
+                                placeholder="Enter your full name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="customerPhone">
+                                Phone Number *
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="customerPhone"
+                                name="customerPhone"
+                                placeholder="03XX XXXXXXX"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="customerEmail">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="customerEmail"
+                                name="customerEmail"
+                                placeholder="example@email.com"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="customerCity">
+                                City *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="customerCity"
+                                name="customerCity"
+                                placeholder="Your city"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group full-width">
+
+                            <label for="customerAddress">
+                                Complete Address *
+                            </label>
+
+                            <textarea
+                                id="customerAddress"
+                                name="customerAddress"
+                                placeholder="House number, street, area, etc."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <div class="form-group full-width">
+
+                            <label for="customerNote">
+                                Additional Note
+                            </label>
+
+                            <textarea
+                                id="customerNote"
+                                name="customerNote"
+                                placeholder="Any additional information..."
+                            ></textarea>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================
+                         PAYMENT METHOD
+                    ========================== -->
+
+                    <div class="payment-section">
+
+                        <h3>Payment Method</h3>
+
+                        <p class="payment-subtitle">
+                            Select how you want to pay.
+                        </p>
+
+
+                        <label class="payment-option">
+
+                            <input
+                                type="radio"
+                                name="paymentMethod"
+                                value="Cash on Delivery"
+                                checked
+                            >
+
+                            <span class="payment-box">
+
+                                <strong>Cash on Delivery</strong>
+
+                                <small>
+                                    Pay when your order is delivered.
+                                </small>
+
+                            </span>
+
+                        </label>
+
+
+                        <label class="payment-option">
+
+                            <input
+                                type="radio"
+                                name="paymentMethod"
+                                value="Easypaisa"
+                            >
+
+                            <span class="payment-box">
+
+                                <strong>Easypaisa</strong>
+
+                                <small>
+                                    Pay through Easypaisa.
+                                </small>
+
+                            </span>
+
+                        </label>
+
+
+                        <!-- EASYPAISA DETAILS -->
+
+                        <div
+                            class="easypaisa-box"
+                            id="easypaisaBox"
+                        >
+
+                            <h4>Easypaisa Payment</h4>
+
+                            <p>
+                                After completing your payment through
+                                Easypaisa, enter your transaction/reference
+                                number below.
+                            </p>
+
+                            <div class="easypaisa-info">
+
+                                <span>Payment Account</span>
+
+                                <strong>
+                                    Your Easypaisa Number
+                                </strong>
+
+                            </div>
+
+
+                            <label for="transactionId">
+                                Transaction / Reference Number
+                            </label>
+
+                            <input
+                                type="text"
+                                id="transactionId"
+                                name="transactionId"
+                                placeholder="Enter transaction reference"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================
+                         HIDDEN PRODUCT DATA
+                    ========================== -->
+
+                    <input
+                        type="hidden"
+                        id="hiddenProduct"
+                        name="product"
+                    >
+
+                    <input
+                        type="hidden"
+                        id="hiddenCategory"
+                        name="category"
+                    >
+
+                    <input
+                        type="hidden"
+                        id="hiddenSize"
+                        name="size"
+                    >
+
+                    <input
+                        type="hidden"
+                        id="hiddenQuantity"
+                        name="quantity"
+                    >
+
+                    <input
+                        type="hidden"
+                        id="hiddenPrice"
+                        name="price"
+                    >
+
+                    <input
+                        type="hidden"
+                        id="hiddenTotal"
+                        name="total"
+                    >
+
+
+                    <!-- SUBMIT -->
+
+                    <button
+                        type="submit"
+                        class="place-order-btn"
+                    >
+                        Place Order
+                    </button>
+
+
+                    <div
+                        id="orderMessage"
+                        class="order-message"
+                    ></div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer class="simple-footer">
+
+    © 2026 Your Shoes. All Rights Reserved.
+
+</footer>
+
+
+<script src="assets/js/theme.js"></script>
+<script src="assets/js/order.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product | Your Shoes</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="main-header">
+
+        <div class="header-container">
+
+            <a href="index.html" class="logo">
+                YOUR SHOES
+            </a>
+
+
+            <nav class="desktop-nav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="shop.html" class="active">
+                    Shop
+                </a>
+
+                <a href="about-us.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <a href="login.html" class="header-contact">
+    Login / Sign Up
+</a>
+            <button class="menu-btn" id="menuBtn">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+
+        <nav class="mobile-nav" id="mobileNav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="shop.html">
+                Shop
+            </a>
+
+            <a href="about-us.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         PRODUCT DETAILS
+    ========================== -->
+
+    <section class="single-product-section">
+
+        <div class="container">
+
+
+            <!-- Breadcrumb -->
+
+            <div class="product-breadcrumb">
+
+                <a href="shop.html">
+                    Shop
+                </a>
+
+                <span>/</span>
+
+                <span id="breadcrumbProduct">
+                    Product
+                </span>
+
+            </div>
+
+
+
+            <!-- Product -->
+
+            <div class="single-product-grid">
+
+
+                <!-- PRODUCT IMAGE -->
+
+                <div class="single-product-image">
+
+                    <span
+                        class="single-product-label"
+                        id="productLabel"
+                    ></span>
+
+                    <img
+                        id="productImage"
+                        src=""
+                        alt="Product"
+                    >
+
+                </div>
+
+
+
+                <!-- PRODUCT DETAILS -->
+
+                <div class="single-product-details">
+
+                    <p
+                        class="single-product-category"
+                        id="productCategory"
+                    >
+                        Category
+                    </p>
+
+
+                    <h1 id="productName">
+                        Product Name
+                    </h1>
+
+
+                    <div
+                        class="single-product-price"
+                        id="productPrice"
+                    >
+                        Rs. 0
+                    </div>
+
+
+                    <p
+                        class="single-product-description"
+                        id="productDescription"
+                    >
+                        Product description.
+                    </p>
+
+
+
+                    <!-- SIZE -->
+
+                    <div class="product-option">
+
+                        <label for="productSize">
+                            Select Size
+                        </label>
+
+                        <select id="productSize">
+
+                            <option value="">
+                                Select Size
+                            </option>
+
+                            <option value="6">
+                                6
+                            </option>
+
+                            <option value="7">
+                                7
+                            </option>
+
+                            <option value="8">
+                                8
+                            </option>
+
+                            <option value="9">
+                                9
+                            </option>
+
+                            <option value="10">
+                                10
+                            </option>
+
+                            <option value="11">
+                                11
+                            </option>
+
+                            <option value="12">
+                                12
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- QUANTITY -->
+
+                    <div class="product-option">
+
+                        <label>
+                            Quantity
+                        </label>
+
+
+                        <div class="quantity-box">
+
+                            <button
+                                type="button"
+                                id="minusBtn"
+                            >
+                                −
+                            </button>
+
+
+                            <input
+                                type="number"
+                                id="productQuantity"
+                                value="1"
+                                min="1"
+                                max="20"
+                            >
+
+
+                            <button
+                                type="button"
+                                id="plusBtn"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- TOTAL -->
+
+                    <div class="product-total">
+
+                        <span>
+                            Total Price
+                        </span>
+
+                        <strong id="productTotal">
+                            Rs. 0
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- BUTTONS -->
+
+                    <div class="product-actions">
+
+                        <button
+                            type="button"
+                            class="buy-now-btn"
+                            id="buyNowBtn"
+                        >
+                            Buy Now
+                        </button>
+
+
+                        <a
+                            href="shop.html"
+                            class="back-shop-btn"
+                        >
+                            Continue Shopping
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ORDER FORM
+    ========================== -->
+
+    <section
+        class="order-section"
+        id="orderSection"
+    >
+
+        <div class="container">
+
+            <div class="order-wrapper">
+
+
+                <!-- LEFT -->
+
+                <div>
+
+                    <div class="order-heading">
+
+                        <span class="section-label">
+                            YOUR ORDER
+                        </span>
+
+                        <h2>
+                            Complete Your Order
+                        </h2>
+
+                        <p>
+                            Please enter your details below
+                            to place your order.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- ORDER SUMMARY -->
+
+                    <div class="order-summary">
+
+                        <h3>
+                            Order Summary
+                        </h3>
+
+
+                        <div class="order-product-preview">
+
+                            <img
+                                id="orderProductImage"
+                                src=""
+                                alt="Selected Product"
+                            >
+
+                            <div>
+
+                                <strong id="orderProductName">
+                                    Product
+                                </strong>
+
+                                <p id="orderProductCategory">
+                                    Category
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="summary-row">
+
+                            <span>
+                                Size
+                            </span>
+
+                            <strong id="summarySize">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-row">
+
+                            <span>
+                                Quantity
+                            </span>
+
+                            <strong id="summaryQuantity">
+                                1
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-row">
+
+                            <span>
+                                Price
+                            </span>
+
+                            <strong id="summaryPrice">
+                                Rs. 0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-row summary-total">
+
+                            <span>
+                                Total
+                            </span>
+
+                            <strong id="summaryTotal">
+                                Rs. 0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RIGHT FORM -->
+
+                <div>
+
+                    <form id="orderForm">
+
+
+                        <div class="form-grid">
+
+
+                            <!-- NAME -->
+
+                            <div class="form-group">
+
+                                <label for="customerName">
+                                    Full Name *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="customerName"
+                                    name="customerName"
+                                    placeholder="Enter your full name"
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <!-- PHONE -->
+
+                            <div class="form-group">
+
+                                <label for="customerPhone">
+                                    Phone Number *
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="customerPhone"
+                                    name="customerPhone"
+                                    placeholder="03XX XXXXXXX"
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <!-- EMAIL -->
+
+                            <div class="form-group">
+
+                                <label for="customerEmail">
+                                    Email
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="customerEmail"
+                                    name="customerEmail"
+                                    placeholder="example@email.com"
+                                >
+
+                            </div>
+
+
+
+                            <!-- CITY -->
+
+                            <div class="form-group">
+
+                                <label for="customerCity">
+                                    City *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="customerCity"
+                                    name="customerCity"
+                                    placeholder="Your city"
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <!-- ADDRESS -->
+
+                            <div class="form-group full-width">
+
+                                <label for="customerAddress">
+                                    Complete Address *
+                                </label>
+
+                                <textarea
+                                    id="customerAddress"
+                                    name="customerAddress"
+                                    placeholder="House number, street, area, etc."
+                                    required
+                                ></textarea>
+
+                            </div>
+
+
+
+                            <!-- NOTE -->
+
+                            <div class="form-group full-width">
+
+                                <label for="customerNote">
+                                    Additional Note
+                                </label>
+
+                                <textarea
+                                    id="customerNote"
+                                    name="customerNote"
+                                    placeholder="Any additional information..."
+                                ></textarea>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- HIDDEN PRODUCT DATA -->
+
+                        <input
+                            type="hidden"
+                            id="hiddenProduct"
+                            name="product"
+                        >
+
+                        <input
+                            type="hidden"
+                            id="hiddenSize"
+                            name="size"
+                        >
+
+                        <input
+                            type="hidden"
+                            id="hiddenQuantity"
+                            name="quantity"
+                        >
+
+                        <input
+                            type="hidden"
+                            id="hiddenTotal"
+                            name="total"
+                        >
+
+
+                        <button
+                            type="submit"
+                            class="place-order-btn"
+                        >
+                            Place Order
+                        </button>
+
+
+                        <div
+                            id="orderMessage"
+                            class="order-message"
+                        ></div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="simple-footer">
+
+        © 2026 Your Shoes. All Rights Reserved.
+
+    </footer>
+
+
+
+    <!-- JS -->
+
+    <script src="assets/js/theme.js"></script>
+
+    <script src="assets/js/product.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Your Shoes</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+
+    <!-- =========================
+         PAGE LOADER
+    ========================== -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <div class="loader-logo">YOUR SHOES</div>
+            <div class="loader-line">
+                <span></span>
+            </div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <header class="main-header">
+
+        <div class="header-container">
+
+            <a href="index.html" class="logo">
+                YOUR SHOES
+            </a>
+
+            <nav class="desktop-nav">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="about-us.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <a href="login.html" class="header-contact">
+                Login
+            </a>
+
+            <button class="menu-btn" id="menuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+        <nav class="mobile-nav" id="mobileNav">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about-us.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+        </nav>
+
+    </header>
+
+
+    <main class="auth-page">
+
+        <div class="auth-card">
+
+            <div class="auth-heading">
+
+                <span>WELCOME BACK</span>
+
+                <h1>Login</h1>
+
+                <p>
+                    Login to your Your Shoes account.
+                </p>
+
+            </div>
+
+
+            <form id="loginForm">
+
+                <div class="auth-field">
+
+                    <label for="loginEmail">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="auth-field">
+
+                    <label for="loginPassword">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Enter your password"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="auth-submit-btn"
+                >
+                    Login
+                </button>
+
+
+                <div
+                    id="loginMessage"
+                    class="auth-message"
+                ></div>
+
+            </form>
+
+
+            <div class="auth-switch">
+
+                <p>
+                    Don't have an account?
+                    <a href="signup.html">
+                        Create Account
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <footer class="simple-footer">
+        © 2026 Your Shoes. All Rights Reserved.
+    </footer>
+
+
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/auth.js"></script>
+
+</body>
+
+</html>

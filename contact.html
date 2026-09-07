@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | Your Shoes</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+
+    <!-- =========================
+         PAGE LOADER
+    ========================== -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <div class="loader-logo">YOUR SHOES</div>
+            <div class="loader-line">
+                <span></span>
+            </div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- =========================
+     HEADER
+========================== -->
+<header class="main-header">
+
+    <div class="header-container">
+
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+            YOUR SHOES
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about-us.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <!-- Login Button -->
+        <a href="login.html" class="header-contact">
+            Login / Sign Up
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button class="menu-btn" id="menuBtn" type="button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </div>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about-us.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+
+        <a href="login.html" class="mobile-login">
+            Login / Sign Up
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+    <!-- =====================================================
+         CONTACT HERO
+    ====================================================== -->
+
+    <section class="contact-page-hero">
+
+        <div class="container">
+
+            <span>CONTACT US</span>
+
+            <h1>
+                Get In Touch
+            </h1>
+
+            <p>
+                Have a question? We would love to hear from you.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CONTACT SECTION
+    ====================================================== -->
+
+    <section class="contact-page-section">
+
+        <div class="container">
+
+            <div class="contact-page-grid">
+
+
+                <!-- =================================================
+                     CONTACT INFORMATION
+                ================================================== -->
+
+                <div class="contact-info">
+
+                    <span class="contact-small-title">
+                        LET'S TALK
+                    </span>
+
+                    <h2>
+                        We'd Love To Hear From You
+                    </h2>
+
+                    <p class="contact-description">
+                        Whether you have a question about our shoes,
+                        your order, or anything else, our team is
+                        ready to help.
+                    </p>
+
+
+                    <!-- PHONE -->
+
+                    <div class="contact-info-item">
+
+                        <div class="contact-icon">
+                            ☎
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Phone
+                            </span>
+
+                            <a href="tel:+923278277233">
+                                +923 2782 77233
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="contact-info-item">
+
+                        <div class="contact-icon">
+                            ✉
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Email
+                            </span>
+
+                            <a href="mailto:nizamudin1804@gmail.com">
+                                nizamudin1804@gmail.com
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- LOCATION -->
+
+                    <div class="contact-info-item">
+
+                        <div class="contact-icon">
+                            📍
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Location
+                            </span>
+
+                            <p>
+                                Karachi, Pakistan
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     CONTACT FORM
+                ================================================== -->
+
+                <div class="contact-form-card">
+
+                    <div class="contact-form-heading">
+
+                        <span>
+                            SEND A MESSAGE
+                        </span>
+
+                        <h2>
+                            Contact Us
+                        </h2>
+
+                    </div>
+
+
+                    <form id="contactForm">
+
+
+                        <!-- NAME -->
+
+                        <div class="contact-form-field">
+
+                            <label for="contactName">
+                                Full Name *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="contactName"
+                                name="name"
+                                placeholder="Enter your name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+
+                        <div class="contact-form-field">
+
+                            <label for="contactEmail">
+                                Email Address *
+                            </label>
+
+                            <input
+                                type="email"
+                                id="contactEmail"
+                                name="email"
+                                placeholder="Enter your email"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- PHONE -->
+
+                        <div class="contact-form-field">
+
+                            <label for="contactPhone">
+                                Phone Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="contactPhone"
+                                name="phone"
+                                placeholder="03XX XXXXXXX"
+                            >
+
+                        </div>
+
+
+                        <!-- SUBJECT -->
+
+                        <div class="contact-form-field">
+
+                            <label for="contactSubject">
+                                Subject *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="contactSubject"
+                                name="subject"
+                                placeholder="What is your message about?"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- MESSAGE -->
+
+                        <div class="contact-form-field">
+
+                            <label for="contactMessage">
+                                Message *
+                            </label>
+
+                            <textarea
+                                id="contactMessage"
+                                name="message"
+                                placeholder="Write your message..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <!-- BUTTON -->
+
+                        <button
+                            type="submit"
+                            class="contact-submit-btn"
+                        >
+                            Send Message
+                        </button>
+
+
+                        <!-- SUCCESS MESSAGE -->
+
+                        <div
+                            id="contactMessageStatus"
+                            class="contact-message-status"
+                        ></div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="simple-footer">
+
+        © 2026 Your Shoes. All Rights Reserved.
+
+    </footer>
+
+
+    <!-- JS -->
+
+    <script src="assets/js/theme.js"></script>
+
+    <script src="assets/js/contact.js"></script>
+
+</body>
+
+</html>

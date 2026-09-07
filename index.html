@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shoes Store | Home</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         PAGE LOADER
+    ========================== -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <div class="loader-logo">YOUR SHOES</div>
+            <div class="loader-line">
+                <span></span>
+            </div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+
+    <!-- =========================
+     HEADER
+========================== -->
+<header class="main-header">
+
+    <div class="header-container">
+
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+            YOUR SHOES
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav">
+            <a href="index.html" class="active">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about-us.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <!-- Header Login Button -->
+        <a href="login.html" class="header-contact">
+            Login / Sign Up
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button class="menu-btn" id="menuBtn" type="button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </div>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about-us.html">About</a>
+        <a href="contact.html">Contact</a>
+
+        <!-- Mobile Login Button -->
+        <a href="login.html" class="mobile-login">
+            Login / Sign Up
+        </a>
+
+    </nav>
+
+</header>
+
+    <!-- =========================
+         HERO SLIDER
+    ========================== -->
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-slider" id="heroSlider">
+
+                <!-- Slide 1 -->
+                <div class="hero-slide active-slide">
+
+                    <div class="hero-content">
+                        <p class="small-title">NEW COLLECTION</p>
+
+                        <h1>
+                            Step Into<br>
+                            Your Style
+                        </h1>
+
+                        <p class="hero-text">
+                            Discover premium shoes designed
+                            for comfort, confidence and everyday style.
+                        </p>
+
+                        <a href="shop.html" class="primary-btn">
+                            Shop Collection
+                        </a>
+                    </div>
+
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=85"
+                             alt="Premium red shoes">
+                    </div>
+
+                </div>
+
+
+                <!-- Slide 2 -->
+                <div class="hero-slide">
+
+                    <div class="hero-content">
+                        <p class="small-title">PREMIUM FOOTWEAR</p>
+
+                        <h1>
+                            Walk With<br>
+                            Confidence
+                        </h1>
+
+                        <p class="hero-text">
+                            Modern footwear with a perfect
+                            combination of comfort and style.
+                        </p>
+
+                        <a href="shop.html" class="primary-btn">
+                            Explore Shoes
+                        </a>
+                    </div>
+
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=1200&q=85"
+                             alt="Premium sneakers">
+                    </div>
+
+                </div>
+
+
+                <!-- Slide 3 -->
+                <div class="hero-slide">
+
+                    <div class="hero-content">
+                        <p class="small-title">LATEST ARRIVALS</p>
+
+                        <h1>
+                            Made For<br>
+                            Every Journey
+                        </h1>
+
+                        <p class="hero-text">
+                            Find your next favourite pair from
+                            our latest collection.
+                        </p>
+
+                        <a href="shop.html" class="primary-btn">
+                            View Collection
+                        </a>
+                    </div>
+
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=1200&q=85"
+                             alt="Latest footwear collection">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Slider Controls -->
+            <button class="slider-arrow prev" id="prevSlide">
+                &#10094;
+            </button>
+
+            <button class="slider-arrow next" id="nextSlide">
+                &#10095;
+            </button>
+
+
+            <!-- Slider Dots -->
+            <div class="slider-dots" id="sliderDots">
+                <button class="dot active-dot"></button>
+                <button class="dot"></button>
+                <button class="dot"></button>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FEATURED SECTION
+        ========================== -->
+
+        <section class="featured-section reveal">
+
+            <div class="section-heading">
+                <p>OUR COLLECTION</p>
+                <h2>Featured Shoes</h2>
+                <span>
+                    Discover styles made for every occasion.
+                </span>
+            </div>
+
+
+            <div class="product-slider-wrapper">
+
+                <button class="product-arrow product-prev" id="productPrev">
+                    &#10094;
+                </button>
+
+                <div class="product-slider" id="productSlider">
+
+                    <!-- Product 1 -->
+                    <article class="product-card">
+
+                        <div class="product-image">
+                            <span class="product-label">NEW</span>
+
+                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80"
+                                 alt="Classic Red Sneakers">
+                        </div>
+
+                        <div class="product-info">
+                            <h3>Classic Red Sneakers</h3>
+                            <p>Premium Collection</p>
+                            <strong>Rs. 4,999</strong>
+                        </div>
+
+                    </article>
+
+
+                    <!-- Product 2 -->
+                    <article class="product-card">
+
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=700&q=80"
+                                 alt="Classic White Sneakers">
+                        </div>
+
+                        <div class="product-info">
+                            <h3>Classic White Sneakers</h3>
+                            <p>Everyday Collection</p>
+                            <strong>Rs. 5,499</strong>
+                        </div>
+
+                    </article>
+
+
+                    <!-- Product 3 -->
+                    <article class="product-card">
+
+                        <div class="product-image">
+                            <span class="product-label">POPULAR</span>
+
+                            <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=700&q=80"
+                                 alt="Street Style Shoes">
+                        </div>
+
+                        <div class="product-info">
+                            <h3>Street Style Shoes</h3>
+                            <p>Urban Collection</p>
+                            <strong>Rs. 5,999</strong>
+                        </div>
+
+                    </article>
+
+
+                    <!-- Product 4 -->
+                    <article class="product-card">
+
+                        <div class="product-image">
+
+                            <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&w=700&q=80"
+                                 alt="Premium Black Shoes">
+                        </div>
+
+                        <div class="product-info">
+                            <h3>Premium Black Shoes</h3>
+                            <p>Luxury Collection</p>
+                            <strong>Rs. 6,499</strong>
+                        </div>
+
+                    </article>
+
+
+                    <!-- Product 5 -->
+                    <article class="product-card">
+
+                        <div class="product-image">
+
+                            <img src="https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=700&q=80"
+                                 alt="Casual Sneakers">
+                        </div>
+
+                        <div class="product-info">
+                            <h3>Casual Sneakers</h3>
+                            <p>Casual Collection</p>
+                            <strong>Rs. 4,499</strong>
+                        </div>
+
+                    </article>
+
+                    <!-- Product 6 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <span class="product-label">NEW</span>
+                            <img src="https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=700&q=80"alt="Premium Casual Shoes">
+                        </div>
+                        <div class="product-info">
+                            <h3>Premium Casual Shoes</h3>
+                            <p>Casual Collection</p>
+                            <strong>Rs. 4,799</strong>
+                        </div>
+                    </article>
+
+
+                    <!-- Product 7 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=700&q=80"alt="Urban Sneakers">
+                        </div>
+                        <div class="product-info">
+                            <h3>Urban Sneakers</h3>
+                            <p>Street Collection</p>
+                            <strong>Rs. 5,299</strong>
+                        </div>
+                    </article>
+
+
+                    <!-- Product 8 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <span class="product-label">POPULAR</span>
+                            <img src="https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?auto=format&fit=crop&w=700&q=80"alt="Classic Lifestyle Shoes">
+                        </div>
+                        <div class="product-info">
+                            <h3>Classic Lifestyle Shoes</h3>
+                            <p>Premium Collection</p>
+                            <strong>Rs. 5,899</strong>
+                        </div>
+                    </article>
+
+                    
+
+                </div>
+
+                <button class="product-arrow product-next" id="productNext">
+                    &#10095;
+                </button>
+
+            </div>
+
+
+            <div class="center-button">
+                <a href="shop.html" class="outline-btn">
+                    View All Shoes
+                </a>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CATEGORIES
+        ========================== -->
+
+        <section class="category-section reveal">
+
+            <div class="section-heading">
+                <p>SHOP BY STYLE</p>
+                <h2>Find Your Perfect Pair</h2>
+            </div>
+
+
+            <div class="category-grid">
+
+                <a href="shop.html" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80"
+                         alt="Sneakers">
+
+                    <div class="category-overlay">
+                        <h3>Sneakers</h3>
+                        <span>Explore Collection →</span>
+                    </div>
+                </a>
+
+
+                <a href="shop.html" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1449247709967-d4461a6a6103?auto=format&fit=crop&w=900&q=80"
+                         alt="Formal Shoes">
+
+                    <div class="category-overlay">
+                        <h3>Formal Shoes</h3>
+                        <span>Explore Collection →</span>
+                    </div>
+                </a>
+
+
+                <a href="shop.html" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1554130840-7f3e3e9e4d0d?auto=format&fit=crop&w=900&q=80"
+                         alt="Casual Shoes">
+
+                    <div class="category-overlay">
+                        <h3>Casual Shoes</h3>
+                        <span>Explore Collection →</span>
+                    </div>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT PREVIEW
+        ========================== -->
+
+        <section class="about-preview reveal">
+
+            <div class="about-preview-image">
+                <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=85"
+                     alt="Premium shoes">
+            </div>
+
+            <div class="about-preview-content">
+
+                <p class="small-title">OUR STORY</p>
+
+                <h2>
+                    Designed For<br>
+                    Your Everyday Journey
+                </h2>
+
+                <p>
+                    We believe the right pair of shoes can change
+                    the way you feel. Our collection combines
+                    modern design, comfort and quality.
+                </p>
+
+                <a href="about.html" class="primary-btn">
+                    Discover Our Story
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             WHATSAPP CTA
+        ========================== -->
+
+        <section class="whatsapp-section reveal">
+
+            <div>
+                <p>NEED HELP?</p>
+
+                <h2>
+                    Talk To Us On WhatsApp
+                </h2>
+
+                <span>
+                    Have a question about our shoes?
+                    We're here to help.
+                </span>
+            </div>
+
+            <a href="https://wa.me/92378277233"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="whatsapp-btn">
+
+                WhatsApp Us
+
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="simple-footer">
+        © 2026 Your Shoes. All Rights Reserved.
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="assets/js/theme.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shop | Your Shoes</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+</head>
+
+
+<body>
+
+<!-- =========================
+         PAGE LOADER
+    ========================== -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <div class="loader-logo">YOUR SHOES</div>
+            <div class="loader-line">
+                <span></span>
+            </div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+
+<!-- =========================
+     HEADER
+========================== -->
+<header class="main-header">
+
+    <div class="header-container">
+
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+            YOUR SHOES
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about-us.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <!-- Login Button -->
+        <a href="login.html" class="header-contact">
+            Login / Sign Up
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button class="menu-btn" id="menuBtn" type="button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </div>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+
+        <a href="index.html">Home</a>
+        <a href="shop.html" class="active">Shop</a>
+        <a href="about-us.html">About</a>
+        <a href="contact.html">Contact</a>
+
+        <a href="login.html" class="mobile-login">
+            Login / Sign Up
+        </a>
+
+    </nav>
+
+</header>
+
+
+    <!-- =========================
+         SHOP HERO
+    ========================== -->
+
+    <section class="shop-hero">
+
+        <div class="container">
+
+            <div class="shop-hero-content">
+
+                <span class="small-heading">
+                    OUR COLLECTION
+                </span>
+
+                <h1>
+                    Find Your
+                    <span>Perfect Pair.</span>
+                </h1>
+
+                <p>
+                    Explore our collection of stylish,
+                    comfortable and quality footwear
+                    made for every occasion.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SHOP SECTION
+    ========================== -->
+
+    <section class="shop-section section-padding">
+
+        <div class="container">
+
+
+            <!-- SHOP TOP -->
+
+            <div class="shop-top">
+
+                <div class="shop-result">
+
+                    <p>
+                        Showing
+                        <strong>15</strong>
+                        products
+                    </p>
+
+                </div>
+
+
+                <!-- SORT -->
+
+                <div class="shop-sort">
+
+                    <label for="sort">
+                        Sort By
+                    </label>
+
+                    <select id="sort">
+
+                        <option value="default">
+                            Default
+                        </option>
+
+                        <option value="low">
+                            Price: Low to High
+                        </option>
+
+                        <option value="high">
+                            Price: High to Low
+                        </option>
+
+                        <option value="new">
+                            Newest
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 PRODUCT GRID
+            ========================== -->
+
+            <div class="shop-grid">
+
+
+                <!-- =========================
+                     PRODUCT 1
+                ========================== -->
+
+                <article class="shop-product-card">
+
+                    <div class="shop-product-image">
+
+                        <span class="product-label">
+                            NEW
+                        </span>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=85"
+                            alt="Classic Red Sneakers"
+                        >
+
+                        <div class="product-overlay">
+
+                            <a
+                                href="product.html?id=red-sneakers"
+                                class="quick-view"
+                            >
+                                Quick View
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="shop-product-info">
+
+                        <p class="product-category">
+                            Sneakers
+                        </p>
+
+                        <h3>
+                            Classic Red Sneakers
+                        </h3>
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                Rs. 4,999
+                            </strong>
+
+                            <a
+                                href="product.html?id=red-sneakers"
+                                class="add-cart"
+                            >
+                                Add to Cart
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =========================
+                     PRODUCT 2
+                ========================== -->
+
+                <article class="shop-product-card">
+
+                    <div class="shop-product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=800&q=85"
+                            alt="Classic White Sneakers"
+                        >
+
+                        <div class="product-overlay">
+
+                            <a
+                                href="product.html?id=white-sneakers"
+                                class="quick-view"
+                            >
+                                Quick View
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="shop-product-info">
+
+                        <p class="product-category">
+                            Sneakers
+                        </p>
+
+                        <h3>
+                            Classic White Sneakers
+                        </h3>
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                Rs. 5,499
+                            </strong>
+
+                            <a
+                                href="product.html?id=white-sneakers"
+                                class="add-cart"
+                            >
+                                Add to Cart
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =========================
+                     PRODUCT 3
+                ========================== -->
+
+                <article class="shop-product-card">
+
+                    <div class="shop-product-image">
+
+                        <span class="product-label">
+                            POPULAR
+                        </span>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=800&q=85"
+                            alt="Street Style Shoes"
+                        >
+
+                        <div class="product-overlay">
+
+                            <a
+                                href="product.html?id=street-style"
+                                class="quick-view"
+                            >
+                                Quick View
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="shop-product-info">
+
+                        <p class="product-category">
+                            Casual
+                        </p>
+
+                        <h3>
+                            Street Style Shoes
+                        </h3>
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                Rs. 5,999
+                            </strong>
+
+                            <a
+                                href="product.html?id=street-style"
+                                class="add-cart"
+                            >
+                                Add to Cart
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =========================
+                     PRODUCT 4
+                ========================== -->
+
+                <article class="shop-product-card">
+
+                    <div class="shop-product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&w=800&q=85"
+                            alt="Premium Black Shoes"
+                        >
+
+                        <div class="product-overlay">
+
+                            <a
+                                href="product.html?id=premium-black"
+                                class="quick-view"
+                            >
+                                Quick View
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="shop-product-info">
+
+                        <p class="product-category">
+                            Formal
+                        </p>
+
+                        <h3>
+                            Premium Black Shoes
+                        </h3>
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                Rs. 6,499
+                            </strong>
+
+                            <a
+                                href="product.html?id=premium-black"
+                                class="add-cart"
+                            >
+                                Add to Cart
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =========================
+                     PRODUCT 5
+                ========================== -->
+
+                <article class="shop-product-card">
+
+                    <div class="shop-product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=800&q=85"
+                            alt="Casual Sneakers"
+                        >
+
+                        <div class="product-overlay">
+
+                            <a
+                                href="product.html?id=casual-sneakers"
+                                class="quick-view"
+                            >
+                                Quick View
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="shop-product-info">
+
+                        <p class="product-category">
+                            Casual
+                        </p>
+
+                        <h3>
+                            Casual Sneakers
+                        </h3>
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                Rs. 4,499
+                            </strong>
+
+                            <a
+                                href="product.html?id=casual-sneakers"
+                                class="add-cart"
+                            >
+                                Add to Cart
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =========================
+                     PRODUCT 6
+                ========================== -->
+
+                <article class="shop-product-card">
+
+                    <div class="shop-product-image">
+
+                        <span class="product-label">
+                            NEW
+                        </span>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=800&q=85"
+                            alt="Urban Sneakers"
+                        >
+
+                        <div class="product-overlay">
+
+                            <a
+                                href="product.html?id=urban-sneakers"
+                                class="quick-view"
+                            >
+                                Quick View
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="shop-product-info">
+
+                        <p class="product-category">
+                            Sneakers
+                        </p>
+
+                        <h3>
+                            Urban Sneakers
+                        </h3>
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                Rs. 5,299
+                            </strong>
+
+                            <a
+                                href="product.html?id=urban-sneakers"
+                                class="add-cart"
+                            >
+                                Add to Cart
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =========================
+                     PRODUCT 7
+                ========================== -->
+
+                <article class="shop-product-card">
+
+                    <div class="shop-product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?auto=format&fit=crop&w=800&q=85"
+                            alt="Classic Lifestyle Shoes"
+                        >
+
+                        <div class="product-overlay">
+
+                            <a
+                                href="product.html?id=lifestyle-shoes"
+                                class="quick-view"
+                            >
+                                Quick View
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="shop-product-info">
+
+                        <p class="product-category">
+                            Lifestyle
+                        </p>
+
+                        <h3>
+                            Classic Lifestyle Shoes
+                        </h3>
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                Rs. 5,899
+                            </strong>
+
+                            <a
+                                href="product.html?id=lifestyle-shoes"
+                                class="add-cart"
+                            >
+                                Add to Cart
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =========================
+                     PRODUCT 8
+                ========================== -->
+
+                <article class="shop-product-card">
+
+                    <div class="shop-product-image">
+
+                        <span class="product-label">
+                            SALE
+                        </span>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=800&q=85"
+                            alt="Premium Lifestyle Shoes"
+                        >
+
+                        <div class="product-overlay">
+
+                            <a
+                                href="product.html?id=premium-lifestyle"
+                                class="quick-view"
+                            >
+                                Quick View
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="shop-product-info">
+
+                        <p class="product-category">
+                            Premium
+                        </p>
+
+                        <h3>
+                            Premium Lifestyle Shoes
+                        </h3>
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                Rs. 6,299
+                            </strong>
+
+                            <a
+                                href="product.html?id=premium-lifestyle"
+                                class="add-cart"
+                            >
+                                Add to Cart
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =========================
+                     PRODUCT 9
+                ========================== -->
+
+                <article class="shop-product-card">
+
+                    <div class="shop-product-image">
+
+                        <span class="product-label">
+                            NEW
+                        </span>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=800&q=85"
+                            alt="Classic Canvas Shoes"
+                        >
+
+                        <div class="product-overlay">
+
+                            <a
+                                href="product.html?id=canvas-shoes"
+                                class="quick-view"
+                            >
+                                Quick View
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="shop-product-info">
+
+                        <p class="product-category">
+                            Casual
+                        </p>
+
+                        <h3>
+                            Classic Canvas Shoes
+                        </h3>
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                Rs. 3,999
+                            </strong>
+
+                            <a
+                                href="product.html?id=canvas-shoes"
+                                class="add-cart"
+                            >
+                                Add to Cart
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =========================
+                     PRODUCT 10
+                ========================== -->
+
+                <article class="shop-product-card">
+
+                    <div class="shop-product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=800&q=85"
+                            alt="White Running Shoes"
+                        >
+
+                        <div class="product-overlay">
+
+                            <a
+                                href="product.html?id=running-shoes"
+                                class="quick-view"
+                            >
+                                Quick View
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="shop-product-info">
+
+                        <p class="product-category">
+                            Running
+                        </p>
+
+                        <h3>
+                            White Running Shoes
+                        </h3>
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                Rs. 5,799
+                            </strong>
+
+                            <a
+                                href="product.html?id=running-shoes"
+                                class="add-cart"
+                            >
+                                Add to Cart
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =========================
+                     PRODUCT 11
+                ========================== -->
+
+                <article class="shop-product-card">
+
+                    <div class="shop-product-image">
+
+                        <span class="product-label">
+                            POPULAR
+                        </span>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1554130840-7f3e3e9e4d0d?auto=format&fit=crop&w=800&q=85"
+                            alt="Everyday Casual Shoes"
+                        >
+
+                        <div class="product-overlay">
+
+                            <a
+                                href="product.html?id=everyday-casual"
+                                class="quick-view"
+                            >
+                                Quick View
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="shop-product-info">
+
+                        <p class="product-category">
+                            Casual
+                        </p>
+
+                        <h3>
+                            Everyday Casual Shoes
+                        </h3>
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                Rs. 4,799
+                            </strong>
+
+                            <a
+                                href="product.html?id=everyday-casual"
+                                class="add-cart"
+                            >
+                                Add to Cart
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =========================
+                     PRODUCT 12
+                ========================== -->
+
+                <article class="shop-product-card">
+
+                    <div class="shop-product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1533867617858-e7b97e060509?auto=format&fit=crop&w=800&q=85"
+                            alt="Premium Brown Formal Shoes"
+                        >
+
+                        <div class="product-overlay">
+
+                            <a
+                                href="product.html?id=brown-formal"
+                                class="quick-view"
+                            >
+                                Quick View
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="shop-product-info">
+
+                        <p class="product-category">
+                            Formal
+                        </p>
+
+                        <h3>
+                            Premium Brown Formal Shoes
+                        </h3>
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                Rs. 6,799
+                            </strong>
+
+                            <a
+                                href="product.html?id=brown-formal"
+                                class="add-cart"
+                            >
+                                Add to Cart
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =========================
+                     PRODUCT 13
+                ========================== -->
+
+                <article class="shop-product-card">
+
+                    <div class="shop-product-image">
+
+                        <span class="product-label">
+                            NEW
+                        </span>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=800&q=85"
+                            alt="Sport Performance Sneakers"
+                        >
+
+                        <div class="product-overlay">
+
+                            <a
+                                href="product.html?id=sport-sneakers"
+                                class="quick-view"
+                            >
+                                Quick View
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="shop-product-info">
+
+                        <p class="product-category">
+                            Sports
+                        </p>
+
+                        <h3>
+                            Sport Performance Sneakers
+                        </h3>
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                Rs. 6,099
+                            </strong>
+
+                            <a
+                                href="product.html?id=sport-sneakers"
+                                class="add-cart"
+                            >
+                                Add to Cart
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =========================
+                     PRODUCT 14
+                ========================== -->
+
+                <article class="shop-product-card">
+
+                    <div class="shop-product-image">
+
+                        <span class="product-label">
+                            SALE
+                        </span>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1543508282-6319a3e2621f?auto=format&fit=crop&w=800&q=85"
+                            alt="Minimal White Shoes"
+                        >
+
+                        <div class="product-overlay">
+
+                            <a
+                                href="product.html?id=minimal-white"
+                                class="quick-view"
+                            >
+                                Quick View
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="shop-product-info">
+
+                        <p class="product-category">
+                            Lifestyle
+                        </p>
+
+                        <h3>
+                            Minimal White Shoes
+                        </h3>
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                Rs. 4,699
+                            </strong>
+
+                            <a
+                                href="product.html?id=minimal-white"
+                                class="add-cart"
+                            >
+                                Add to Cart
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =========================
+                     PRODUCT 15
+                ========================== -->
+
+                <article class="shop-product-card">
+
+                    <div class="shop-product-image">
+
+                        <span class="product-label">
+                            POPULAR
+                        </span>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1605408499391-6368c628ef42?auto=format&fit=crop&w=800&q=85"
+                            alt="Premium Street Sneakers"
+                        >
+
+                        <div class="product-overlay">
+
+                            <a
+                                href="product.html?id=premium-street"
+                                class="quick-view"
+                            >
+                                Quick View
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="shop-product-info">
+
+                        <p class="product-category">
+                            Sneakers
+                        </p>
+
+                        <h3>
+                            Premium Street Sneakers
+                        </h3>
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                Rs. 6,599
+                            </strong>
+
+                            <a
+                                href="product.html?id=premium-street"
+                                class="add-cart"
+                            >
+                                Add to Cart
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+
+            <!-- =========================
+                 LOAD MORE
+            ========================== -->
+
+            <div class="shop-load-more">
+
+                <button
+                    type="button"
+                    class="outline-btn"
+                >
+                    Load More Shoes
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SHOP CTA
+    ========================== -->
+
+    <section class="shop-cta">
+
+        <div class="container">
+
+            <div class="shop-cta-content">
+
+                <span class="section-label">
+                    NEED HELP?
+                </span>
+
+                <h2>
+                    Can't Find What
+                    You're Looking For?
+                </h2>
+
+                <p>
+                    Contact us and our team will help you
+                    find the perfect pair.
+                </p>
+
+                <a
+                    href="contact.html"
+                    class="primary-btn"
+                >
+                    Contact Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="simple-footer">
+
+        © 2026 Your Shoes. All Rights Reserved.
+
+    </footer>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="assets/js/theme.js"></script>
+
+</body>
+
+</html>
