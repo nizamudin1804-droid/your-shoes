@@ -237,123 +237,122 @@
                     <form
     name="contact"
     method="POST"
+    action="/contact.html"
     data-netlify="true"
     id="contactForm"
 >
 
+    <!-- Netlify Form Name -->
+    <input
+        type="hidden"
+        name="form-name"
+        value="contact"
+    >
 
-                        <!-- NAME -->
+    <!-- NAME -->
+    <div class="contact-form-field">
 
-                        <div class="contact-form-field">
+        <label for="contactName">
+            Full Name *
+        </label>
 
-                            <label for="contactName">
-                                Full Name *
-                            </label>
+        <input
+            type="text"
+            id="contactName"
+            name="name"
+            placeholder="Enter your name"
+            required
+        >
 
-                            <input
-                                type="text"
-                                id="contactName"
-                                name="name"
-                                placeholder="Enter your name"
-                                required
-                            >
-
-                        </div>
-
-
-                        <!-- EMAIL -->
-
-                        <div class="contact-form-field">
-
-                            <label for="contactEmail">
-                                Email Address *
-                            </label>
-
-                            <input
-                                type="email"
-                                id="contactEmail"
-                                name="email"
-                                placeholder="Enter your email"
-                                required
-                            >
-
-                        </div>
+    </div>
 
 
-                        <!-- PHONE -->
+    <!-- EMAIL -->
+    <div class="contact-form-field">
 
-                        <div class="contact-form-field">
+        <label for="contactEmail">
+            Email Address *
+        </label>
 
-                            <label for="contactPhone">
-                                Phone Number
-                            </label>
+        <input
+            type="email"
+            id="contactEmail"
+            name="email"
+            placeholder="Enter your email"
+            required
+        >
 
-                            <input
-                                type="tel"
-                                id="contactPhone"
-                                name="phone"
-                                placeholder="03XX XXXXXXX"
-                            >
-
-                        </div>
-
-
-                        <!-- SUBJECT -->
-
-                        <div class="contact-form-field">
-
-                            <label for="contactSubject">
-                                Subject *
-                            </label>
-
-                            <input
-                                type="text"
-                                id="contactSubject"
-                                name="subject"
-                                placeholder="What is your message about?"
-                                required
-                            >
-
-                        </div>
+    </div>
 
 
-                        <!-- MESSAGE -->
+    <!-- PHONE -->
+    <div class="contact-form-field">
 
-                        <div class="contact-form-field">
+        <label for="contactPhone">
+            Phone Number
+        </label>
 
-                            <label for="contactMessage">
-                                Message *
-                            </label>
+        <input
+            type="tel"
+            id="contactPhone"
+            name="phone"
+            placeholder="03XX XXXXXXX"
+        >
 
-                            <textarea
-                                id="contactMessage"
-                                name="message"
-                                placeholder="Write your message..."
-                                required
-                            ></textarea>
-
-                        </div>
-
-
-                        <!-- BUTTON -->
-
-                        <button
-                            type="submit"
-                            class="contact-submit-btn"
-                        >
-                            Send Message
-                        </button>
+    </div>
 
 
-                        <!-- SUCCESS MESSAGE -->
+    <!-- SUBJECT -->
+    <div class="contact-form-field">
 
-                        <div
-                            id="contactMessageStatus"
-                            class="contact-message-status"
-                        ></div>
+        <label for="contactSubject">
+            Subject *
+        </label>
 
-                    </form>
+        <input
+            type="text"
+            id="contactSubject"
+            name="subject"
+            placeholder="What is your message about?"
+            required
+        >
 
+    </div>
+
+
+    <!-- MESSAGE -->
+    <div class="contact-form-field">
+
+        <label for="contactMessage">
+            Message *
+        </label>
+
+        <textarea
+            id="contactMessage"
+            name="message"
+            placeholder="Write your message..."
+            required
+        ></textarea>
+
+    </div>
+
+
+    <!-- BUTTON -->
+    <button
+        type="submit"
+        class="contact-submit-btn"
+    >
+        Send Message
+    </button>
+
+
+    <!-- STATUS -->
+    <div
+        id="contactMessageStatus"
+        class="contact-message-status"
+    ></div>
+
+</form>
                 </div>
 
             </div>
@@ -378,8 +377,6 @@
     <!-- JS -->
 
     <script src="assets/js/theme.js"></script>
-
-    <script src="assets/js/contact.js"></script>
 
 </body>
 
