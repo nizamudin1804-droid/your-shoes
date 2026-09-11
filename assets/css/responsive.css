@@ -1524,11 +1524,99 @@
     }
 
 
-    .easypaisa-info {
-        flex-direction: column;
+    /* =========================================
+   EASYPAISA RESPONSIVE
+========================================= */
 
-        gap: 5px;
+@media (max-width: 768px) {
+
+    .easypaisa-box {
+        padding: 18px;
+        margin-top: 20px;
+        border-radius: 14px;
     }
+
+    .easypaisa-header h4 {
+        font-size: 21px;
+    }
+
+    .easypaisa-header p {
+        font-size: 13px;
+    }
+
+    .easypaisa-payment-card {
+        padding: 15px;
+    }
+
+    .easypaisa-number-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .easypaisa-number-row strong {
+        font-size: 20px;
+    }
+
+    .copy-easypaisa-btn {
+        width: 100%;
+        padding: 11px;
+    }
+
+    .easypaisa-instructions {
+        padding: 15px;
+    }
+
+    .easypaisa-instructions li {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .transaction-box {
+        padding: 15px;
+    }
+
+    .transaction-box input {
+        height: 46px;
+    }
+
+    .payment-note {
+        font-size: 10px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .easypaisa-box {
+        padding: 14px;
+    }
+
+    .easypaisa-header h4 {
+        font-size: 19px;
+    }
+
+    .easypaisa-number-row strong {
+        font-size: 18px;
+    }
+
+    .easypaisa-card-top {
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .payment-step {
+        font-size: 9px;
+    }
+
+    .easypaisa-payment-card small {
+        font-size: 11px;
+    }
+
+    .easypaisa-instructions li {
+        font-size: 11px;
+    }
+}
 
 }
 
