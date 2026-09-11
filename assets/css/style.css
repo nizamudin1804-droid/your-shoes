@@ -2433,94 +2433,235 @@ font-size: 13px;
 }
 
 
-/* =========================
-   EASYPAISA
-========================= */
+/* =========================================
+   PROFESSIONAL EASYPAISA PAYMENT
+========================================= */
 
 .easypaisa-box {
     display: none;
-
-    margin-top: 15px;
-
-    padding: 20px;
-
-    background: #f7f7f7;
-
-    border-radius: 12px;
-
-    border: 1px solid #e3e3e3;
+    margin-top: 25px;
+    padding: 25px;
+    background: #f8faf9;
+    border: 1px solid #e1e8e4;
+    border-radius: 16px;
 }
 
-.easypaisa-box.show {
-    display: block;
+.easypaisa-header {
+    margin-bottom: 20px;
 }
 
-.easypaisa-box h4 {
-    margin-bottom: 8px;
-
-    font-size: 18px;
+.easypaisa-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #168b4b;
+    margin-bottom: 6px;
 }
 
-.easypaisa-box p {
+.easypaisa-header h4 {
+    margin: 0 0 8px;
+    font-family: "Playfair Display", serif;
+    font-size: 23px;
+    color: #111;
+}
+
+.easypaisa-header p {
+    margin: 0;
     color: #666;
-
-    font-size: 13px;
-
-    line-height: 1.6;
-
-    margin-bottom: 15px;
-}
-
-.easypaisa-info {
-    display: flex;
-
-    justify-content: space-between;
-
-    gap: 20px;
-
-    padding: 13px;
-
-    background: #fff;
-
-    border-radius: 8px;
-
-    margin-bottom: 15px;
-}
-
-.easypaisa-info span {
-    color: #666;
-
-    font-size: 13px;
-}
-
-.easypaisa-info strong {
     font-size: 14px;
+    line-height: 1.6;
 }
 
 
-.easypaisa-box label {
-    display: block;
+/* PAYMENT ACCOUNT CARD */
 
-    font-size: 13px;
+.easypaisa-payment-card {
+    background: #fff;
+    border: 1px solid #dfe7e2;
+    border-radius: 14px;
+    padding: 18px;
+    margin-bottom: 18px;
+}
 
+.easypaisa-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.easypaisa-card-top span:first-child {
+    font-size: 12px;
     font-weight: 600;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: .8px;
+}
 
-    margin-bottom: 7px;
+.payment-step {
+    font-size: 10px;
+    font-weight: 700;
+    color: #168b4b;
+    letter-spacing: 1px;
 }
 
 
-.easypaisa-box input {
-    width: 100%;
+/* NUMBER + COPY BUTTON */
 
-    padding: 13px;
+.easypaisa-number-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
 
-    border: 1px solid #ddd;
+.easypaisa-number-row strong {
+    font-size: 23px;
+    letter-spacing: 1px;
+    color: #111;
+}
 
+.copy-easypaisa-btn {
+    border: 0;
+    background: #168b4b;
+    color: #fff;
+    padding: 10px 15px;
     border-radius: 8px;
-
-    outline: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s ease;
 }
 
+.copy-easypaisa-btn:hover {
+    background: #0f6f3b;
+    transform: translateY(-1px);
+}
+
+.easypaisa-payment-card small {
+    display: block;
+    margin-top: 9px;
+    color: #777;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* INSTRUCTIONS */
+
+.easypaisa-instructions {
+    padding: 18px;
+    background: #fff;
+    border: 1px dashed #cfdad4;
+    border-radius: 14px;
+    margin-bottom: 18px;
+}
+
+.instruction-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 12px;
+}
+
+.easypaisa-instructions ol {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.easypaisa-instructions li {
+    color: #555;
+    font-size: 13px;
+    line-height: 1.7;
+    padding-left: 4px;
+    margin-bottom: 4px;
+}
+
+.easypaisa-instructions li:last-child {
+    margin-bottom: 0;
+}
+
+
+/* TRANSACTION BOX */
+
+.transaction-box {
+    background: #fff;
+    border: 1px solid #dfe7e2;
+    border-radius: 14px;
+    padding: 18px;
+}
+
+.transaction-heading {
+    margin-bottom: 10px;
+}
+
+.transaction-heading label {
+    display: block;
+    margin-top: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #222;
+}
+
+.transaction-box input {
+    width: 100%;
+    height: 48px;
+    padding: 0 14px;
+    border: 1px solid #d7ded9;
+    border-radius: 9px;
+    outline: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    transition: .3s ease;
+}
+
+.transaction-box input:focus {
+    border-color: #168b4b;
+    box-shadow: 0 0 0 3px rgba(22, 139, 75, .08);
+}
+
+.transaction-box small {
+    display: block;
+    margin-top: 8px;
+    color: #888;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+/* IMPORTANT NOTE */
+
+.payment-note {
+    margin-top: 15px;
+    padding: 13px 15px;
+    background: #fffdf5;
+    border: 1px solid #eee5bd;
+    border-radius: 10px;
+    color: #6d6440;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.payment-note strong {
+    color: #4f4727;
+}
+
+
+/* PAYMENT OPTION IMPROVEMENT */
+
+.payment-option {
+    cursor: pointer;
+}
+
+.payment-box {
+    transition: .3s ease;
+}
+
+.payment-option:hover .payment-box {
+    border-color: #168b4b;
+}
 
 /* =========================
    BUTTON
