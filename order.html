@@ -373,43 +373,99 @@
 
         <!-- EASYPAISA DETAILS -->
 
-        <div
-            class="easypaisa-box"
-            id="easypaisaBox"
-        >
+<div class="easypaisa-box" id="easypaisaBox">
 
+    <div class="easypaisa-header">
+        <div>
+            <span class="easypaisa-label">ONLINE PAYMENT</span>
             <h4>Easypaisa Payment</h4>
-
             <p>
-                After completing your payment through
-                Easypaisa, enter your transaction/reference
-                number below.
+                Pay your order using Easypaisa and enter your
+                transaction ID below.
             </p>
+        </div>
+    </div>
 
+    <div class="easypaisa-payment-card">
 
-            <div class="easypaisa-info">
+        <div class="easypaisa-card-top">
+            <span>Easypaisa Account</span>
+            <span class="payment-step">STEP 1</span>
+        </div>
 
-                <span>Payment Account</span>
+        <div class="easypaisa-number-row">
 
-                <strong>
-                    Your Easypaisa Number
-                </strong>
+            <strong id="easypaisaNumber">
+                0327 8277233
+            </strong>
 
-            </div>
-
-
-            <label for="transactionId">
-                Transaction / Reference Number
-            </label>
-
-            <input
-                type="text"
-                id="transactionId"
-                name="transactionId"
-                placeholder="Enter transaction reference"
+            <button
+                type="button"
+                id="copyEasypaisaBtn"
+                class="copy-easypaisa-btn"
             >
+                Copy Number
+            </button>
 
         </div>
+
+        <small>
+            Send the exact order amount to this Easypaisa number.
+        </small>
+
+    </div>
+
+
+    <div class="easypaisa-instructions">
+
+        <div class="instruction-title">
+            How to Pay
+        </div>
+
+        <ol>
+            <li>Open your Easypaisa app.</li>
+            <li>Send the exact order total to the number above.</li>
+            <li>Complete the payment successfully.</li>
+            <li>Enter your transaction/reference number below.</li>
+        </ol>
+
+    </div>
+
+
+    <div class="transaction-box">
+
+        <div class="transaction-heading">
+            <div>
+                <span class="payment-step">STEP 2</span>
+
+                <label for="transactionId">
+                    Transaction / Reference Number *
+                </label>
+            </div>
+        </div>
+
+        <input
+            type="text"
+            id="transactionId"
+            name="transactionId"
+            placeholder="e.g. 123456789"
+            autocomplete="off"
+        >
+
+        <small>
+            Enter the transaction ID shown after completing your payment.
+        </small>
+
+    </div>
+
+
+    <div class="payment-note">
+        <strong>Important:</strong>
+        Please make sure the payment amount and Easypaisa account
+        number are correct before submitting your order.
+    </div>
+
+</div>
 
     </div>
 
