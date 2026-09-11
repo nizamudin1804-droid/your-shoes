@@ -605,3 +605,95 @@ orderForm.addEventListener(
 
     }
 );
+
+
+
+
+
+
+
+
+/* =========================================
+   EASYPAISA PAYMENT
+========================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const paymentMethods = document.querySelectorAll(
+        'input[name="paymentMethod"]'
+    );
+
+    const easypaisaBox = document.getElementById(
+        "easypaisaBox"
+    );
+
+    const transactionId = document.getElementById(
+        "transactionId"
+    );
+
+    const copyButton = document.getElementById(
+        "copyEasypaisaBtn"
+    );
+
+    const easypaisaNumber = document.getElementById(
+        "easypaisaNumber"
+    );
+
+
+    /* SHOW / HIDE EASYPAISA */
+
+    paymentMethods.forEach(function (method) {
+
+        method.addEventListener("change", function () {
+
+            if (this.value === "Easypaisa") {
+
+                easypaisaBox.style.display = "block";
+
+                transactionId.required = true;
+
+            } else {
+
+                easypaisaBox.style.display = "none";
+
+                transactionId.required = false;
+
+                transactionId.value = "";
+            }
+
+        });
+
+    });
+
+
+    /* COPY EASYPAISA NUMBER */
+
+    if (copyButton) {
+
+        copyButton.addEventListener("click", function () {
+
+            const number = easypaisaNumber.textContent.trim();
+
+            navigator.clipboard.writeText(number).then(function () {
+
+                copyButton.textContent = "Copied!";
+
+                setTimeout(function () {
+                    copyButton.textContent = "Copy Number";
+                }, 2000);
+
+            }).catch(function () {
+
+                copyButton.textContent = "Copy Failed";
+
+                setTimeout(function () {
+                    copyButton.textContent = "Copy Number";
+                }, 2000);
+
+            });
+
+        });
+
+    }
+
+});
